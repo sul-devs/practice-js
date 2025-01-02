@@ -1,10 +1,14 @@
-// Store endpoint in a variable.
+// Find an endpoint that has data in it and store it in a variable.
+const url = "https://cat-fact.herokuapp.com/facts";
 
-// Access the data at that endpoint. (Calling fetch returns a promise object containing the data at that endpoint)
+// Request data from that server.
+const requestedData = fetch(url);
 
-// Parse the data. (Convert that data from string to json.)
+requestedData.then((dataInResponse) => dataInResponse.json()).then((objects) => objects.map((object) => console.log(object)));
 
-// Access the specific data you need.
+// Get data.
+// Convert data to JSON.
+// Manipulate JSON data.
 
 // Handle success in getting data.
 
