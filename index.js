@@ -17,7 +17,10 @@ requestData
       const list = document.querySelector("#list");
       renderData(list, object.text);
     })
-  );
+  )
+  .catch((error) => {
+    console.error(`Error: ${error}`);
+  });
 
 // Render data.
 function renderData(list, text) {
