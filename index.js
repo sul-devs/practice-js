@@ -4,6 +4,7 @@ const url = "https://cat-fact.herokuapp.com/facts";
 // Request data from that server.
 const requestData = fetch(url);
 
+// Parse data
 requestData
   .then((responseData) => {
     if (!responseData.ok) {
@@ -17,7 +18,7 @@ requestData
       const list = document.querySelector("#list");
       renderData(list, object.text);
     })
-  )
+  ) // Handle errors
   .catch((error) => {
     console.error(`Error: ${error}`);
   });
@@ -40,3 +41,9 @@ function renderData(list, text) {
 // Check if you have access to the data.
 
 // Get the data, convert it to JSON, access the parts you need
+
+// Get data from any api
+async function getData(url) {
+  try {
+  } catch {}
+}
